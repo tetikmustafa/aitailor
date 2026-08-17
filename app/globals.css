@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --heading-foreground: 223 54% 22%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 223 54% 22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 91% 95%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 217 91% 95%;
+    --muted-foreground: 0 0% 30%;
+    --accent: 217 91% 95%;
+    --accent-foreground: 223 54% 22%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 91% 60% / 0.25;
+    --input: 217 91% 60% / 0.25;
+    --ring: 223 54% 22%;
+    --radius: 0.75rem;
+    --chart-1: 223 54% 22%;
+    --chart-2: 217 91% 60%;
+    --chart-3: 0 0% 0%;
+    --chart-4: 217 91% 95%;
+    --chart-5: 0 0% 30%;
+  }
+
+  .dark {
+    --background: 210 9% 13%;
+    --foreground: 0 0% 100%;
+    --heading-foreground: 26 100% 53%;
+    --card: 210 9% 13%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 9% 13%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 24 91% 60%;
+    --primary-foreground: 210 9% 13%;
+    --secondary: 210 9% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 9% 20%;
+    --muted-foreground: 0 0% 75%;
+    --accent: 210 9% 20%;
+    --accent-foreground: 24 91% 60%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 30 100% 50% / 0.3;
+    --input: 30 100% 50% / 0.3;
+    --ring: 24 91% 60%;
+    --chart-1: 24 91% 60%;
+    --chart-2: 26 100% 53%;
+    --chart-3: 30 100% 50%;
+    --chart-4: 210 9% 13%;
+    --chart-5: 0 0% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--heading-foreground));
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.fade-up-delay-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out 0.2s forwards;
+  will-change: opacity, transform;
+}
+
+.fade-up-delay-2 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out 0.4s forwards;
+  will-change: opacity, transform;
+}
+
+/* ===== Header bar glass effect ===== */
+.header-glass {
+  background: hsl(var(--background) / 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .header-glass {
+  background: hsl(var(--background) / 0.8);
+}
+
+/* ===== Header icon button hover ===== */
+.header-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  transition: all 0.2s ease;
+}
+
+.header-icon-btn:hover {
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+  transform: scale(1.1);
+}
