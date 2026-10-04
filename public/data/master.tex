@@ -120,6 +120,10 @@
 \section{About}
   \resumeSubHeadingListStart
 
+% @id:ABOUT_RESEARCH
+    \resumeItem{\textbf{M.Sc. student in Computer Engineering} at \textbf{Marmara University} with a research focus on \textbf{Natural Language Processing, Deep Learning, and Computer Vision}. Co-authored \textbf{2 NLP research papers}, including a published book chapter, benchmarking \textbf{Transformer models (ALBERT, T5, RoBERTa)} on datasets of up to \textbf{246K samples} and reaching \textbf{97.27\% accuracy}. Experienced in the full research cycle: \textbf{dataset construction, preprocessing, model fine-tuning, experimental benchmarking, and academic writing}. Brings a strong engineering background in \textbf{data pipelines, optimization (MILP), and system design}, enabling reproducible and efficient experimentation.}
+% @end
+
 % @id:ABOUT_FULLSTACK
     \resumeItem{\textbf{Multidisciplinary Computer Engineering graduate} with hands-on expertise across \textbf{Backend Architecture, Data Engineering, AI, and Cybersecurity}. Engineered \textbf{microservice} systems using \textbf{Java and Spring Boot}, built \textbf{ETL} pipelines processing \textbf{300K+ rows}, and developed \textbf{Transformer-based NLP} models achieving \textbf{97.27\% accuracy}. A highly adaptable \textbf{fast learner} who thrives on mastering new technologies. Approaches complex problems with system-level architectural thinking, seamlessly bridging the gap between low-level hardware performance and enterprise-scale deployments across both startup and corporate environments.}
 % @end
@@ -141,11 +145,12 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-% @id:EDUCATION
     \resumeSubheading
       {Marmara University}{Istanbul, Turkiye}
-      {Computer Engineering | GPA: 3.21}{2022 -- 2026}
-% @end
+      {M.Sc. in Computer Engineering}{2026 -- Present}
+    \resumeSubheading
+      {Marmara University}{Istanbul, Turkiye}
+      {B.Sc. in Computer Engineering | GPA: 3.21/4.00}{2022 -- 2026}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
@@ -199,7 +204,8 @@
 
 % @id:PROJ_AI_CV_TAILOR
       \resumeProjectHeading
-          {\textbf{AI-Powered ATS Resume Tailoring Platform} }{}
+          {\textbf{AI-Powered ATS Resume Tailoring Platform} \vspace{5px} } \ \vspace{-5px}
+          {https://aitailor.mustafatetik.com/}
           \resumeItemListStart
             \resumeItem{Architected a full-stack \textbf{AI resume tailoring platform} using \textbf{Next.js 15, TypeScript, and Cloudflare Workers} (OpenNext), automating job-specific resume customization end-to-end.}
             \resumeItem{Engineered a \textbf{multi-provider LLM abstraction layer} spanning \textbf{5 AI providers} (Gemini, OpenAI, Claude, DeepSeek, OpenRouter) with a config-driven fallback chain ensuring zero-downtime failover.}
@@ -258,6 +264,19 @@
           \resumeItemListEnd
 % @end
 
+% @id:PROJ_HEALTHCARE_RESEARCH
+          \resumeProjectHeading
+          {\textbf{Research Paper: Healthcare Sentiment Analysis via Advanced NLP} \vspace{5px} } \ \vspace{-5px}
+          {https://doi.org/10.70269/10.70269/6855221321}
+          \resumeItemListStart
+            \resumeItem{Co-authored an NLP research paper published in \textit{"Yapay Zekâ Tabanlı Sistemler: Teori, Uygulama ve Gelecek Perspektifleri-2"} (BİDGE Yayınları), processing \textbf{12,600+ patient reviews} via NHS and RateMDs APIs.}
+            \resumeItem{Mitigated model bias and resolved \textbf{imbalanced data} challenges by implementing rigorous undersampling techniques to generate a perfectly balanced training corpus.}
+            \resumeItem{Architected a comprehensive benchmark comparing Machine Learning (\textbf{SVM, XGBoost, CatBoost}), Deep Learning (\textbf{1D CNN, textRNN, textGCN}), and \textbf{Transformer} LLMs (\textbf{RoBERTa, DistilBERT}).}
+            \resumeItem{Evaluated architectural scalability across dynamic train-test splits (70/30 and 80/20), tracking \textbf{Accuracy, F1-Score, Precision, and Recall} metrics.}
+            \resumeItem{Achieved a peak classification accuracy of \textbf{76\%} and \textbf{75\% F1-Score} utilizing \textbf{RoBERTa}, while diagnosing and documenting critical \textbf{overfitting} tendencies in conventional CNN/RNN models.}
+          \resumeItemListEnd
+% @end
+
 % @id:PROJ_RANSOMWARE
         \resumeProjectHeading
           {\textbf{Ransomware Simulation \& Analysis} }{}
@@ -272,7 +291,8 @@
 
 % @id:PROJ_PORTFOLIO
           \resumeProjectHeading
-          {\textbf{Personal Portfolio Web Application} }{}
+          {\textbf{Personal Portfolio Web Application} \vspace{5px} } \ \vspace{-5px}
+          {https://mustafatetik.com/}
           \resumeItemListStart
             \resumeItem{Architected a responsive web application utilizing the \textbf{Next.js 15 App Router, React 19, and TypeScript}, configuring strict \textbf{Static Site Generation (SSG)} protocols for zero-dependency cloud-edge deployments.}
             \resumeItem{Engineered a custom dark/light theme toggle mechanism via inline script injection, completely preventing \textbf{Flash of Unstyled Content (FOUC)} and hydration mismatches during client-side rendering.}
@@ -339,17 +359,6 @@
           \resumeItemListEnd
 % @end
 
-% @id:PROJ_HEALTHCARE_RESEARCH
-          \resumeProjectHeading
-          {\textbf{Research Paper: Healthcare Sentiment Analysis via Advanced NLP} }{}
-          \resumeItemListStart
-            \resumeItem{Co-authored an NLP research paper published in \textit{"Yapay Zekâ Tabanlı Sistemler: Teori, Uygulama ve Gelecek Perspektifleri-2"} (BİDGE Yayınları), processing \textbf{12,600+ patient reviews} via NHS and RateMDs APIs.}
-            \resumeItem{Mitigated model bias and resolved \textbf{imbalanced data} challenges by implementing rigorous undersampling techniques to generate a perfectly balanced training corpus.}
-            \resumeItem{Architected a comprehensive benchmark comparing Machine Learning (\textbf{SVM, XGBoost, CatBoost}), Deep Learning (\textbf{1D CNN, textRNN, textGCN}), and \textbf{Transformer} LLMs (\textbf{RoBERTa, DistilBERT}).}
-            \resumeItem{Evaluated architectural scalability across dynamic train-test splits (70/30 and 80/20), tracking \textbf{Accuracy, F1-Score, Precision, and Recall} metrics.}
-            \resumeItem{Achieved a peak classification accuracy of \textbf{76\%} and \textbf{75\% F1-Score} utilizing \textbf{RoBERTa}, while diagnosing and documenting critical \textbf{overfitting} tendencies in conventional CNN/RNN models.}
-          \resumeItemListEnd
-% @end
 
     \resumeSubHeadingListEnd
 
